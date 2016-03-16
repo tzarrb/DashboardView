@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.custom.dashboardview.view.Dashboard
+        android:id="@+id/dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        <!--app:dashCount="80"-->
+        <!--app:dashWidth="0.5dp"-->
+        <!--app:innerRadius="87.5dp"-->
+        <!--app:innerWidth="1.6dp"-->
+        <!--app:outerRadius="95dp"-->
+        <!--app:outerWidth="11dp"-->
+        <!--app:percent="0.0"-->
+        <!--app:pointRadius="5dp"-->
+        <!--app:showInner="true"-->
+        <!--app:startAngle="270"-->
+        <!--app:sweepAngle="-360"-->
+        <!--android:visibility="visible"/>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="剩余电量"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#88ffffff"
+            android:textSize="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="73dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:id="@+id/dashboard_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-13dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="00"
+                android:textColor="#ffffff"
+                android:textSize="74sp"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:text="%"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dashboard_drive_range_layout"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#88ffffff"
+                android:text="可行驶 "/>
+
+            <TextView
+                android:id="@+id/dashboard_drive_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="16sp"
+                android:textColor="#88ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#88ffffff"
+                android:textSize="16sp"
+                android:text="km" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
